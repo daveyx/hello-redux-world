@@ -5,9 +5,13 @@ const initialState = {
 }
 
 export default function(state=initialState, action) {
+  console.log("reducer called... actiontype=" + action.type);
   switch(action.type) {
     case "BUTTON_CLICKED":
       return action.payload;
+      break;
+    case "RESET_CLICKED":
+      return initialState;
       break;
   }
   return state;

@@ -5,7 +5,7 @@ import React from 'react';
 export default class Button extends React.Component {
   render() {
     return(
-      <button>{this.props.buttonText}</button>
+      <button onClick={this.props.clickHandler}>{this.props.buttonText}</button>
     );
   }
 }
